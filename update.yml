@@ -1,0 +1,16 @@
+- hosts: aptitude
+  gather_facts: False
+  tasks:
+  - name: APT Update all packages
+    apt:
+      update_cache: yes
+      upgrade: yes
+      autoremove: True
+
+- hosts: dnf
+  gather_facts: False
+  tasks:
+  - name: DNF Update all packages
+    dnf:
+      name: "*"
+      state: latest
