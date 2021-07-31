@@ -1,4 +1,4 @@
-- hosts: aptitude
+- hosts: apt
   gather_facts: False
   tasks:
   - name: APT Update all packages
